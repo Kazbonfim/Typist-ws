@@ -1,0 +1,30 @@
+/* Estilos adicionais para o elemento arrastável */
+/* #myDraggableChat {
+  width: 600px;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.0s linear;
+} */
+
+#myDraggableChatHeader {
+  cursor: grab;
+}
+
+#myDraggableChatHeader:hover {
+  cursor: grab;
+  transform: scale(1.1);
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.msg-box {
+  transition: 0.3s linear;
+}
+
+.msg-box:hover {
+  cursor: pointer;
+  transform: scale(1);
+}

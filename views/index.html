@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Chat</title>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+
+                    <div class="card-header text-center" id="chatHeaderContainer">
+
+                        <h4 class="mb-0" id="titleArea">Canal de Chat
+                            <i class="bi bi-person-raised-hand text-success"></i>
+                            <span id="usersCount">0</span>
+                        </h4>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <div id="messageDisplay" class="border p-3" style="height: 250px; overflow-y: scroll;">
+                                <div id="msgSystem" class="alert alert-success mb-2 p-2 border-success msg-box"
+                                    role="alert">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">
+                                            <span class="badge bg-success me-2">Sistema</span>
+                                        </h6>
+                                        <small class="text-muted">Agora</small>
+                                    </div>
+                                    <p class="mx-3 my-1">Bem-vindo! <b>Defina um nome de usuário</b>, e <b>também um
+                                            canal</b> para poder conversar com seus amigos!</p>
+                                </div>
+                            </div>
+
+                            <form action="post" id="form">
+
+                                <div class="input-group my-3">
+                                    <span class="input-group-text">Channel</span>
+                                    <input id="channel" type="text" class="form-control" placeholder="?"
+                                        aria-label="Server">
+                                    <span class="input-group-text">Username</span>
+                                    <input id="username" type="text" class="form-control" placeholder="?"
+                                        aria-label="Username">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="chatTextarea" class="form-label ms-1">Mensagem</label>
+                                    <textarea id="mensagem" class="form-control" rows="3"
+                                        placeholder="Escreva sua mensagem aqui!"></textarea>
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-outline-primary" type="submit">Enviar Mensagem</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script src="./socket.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
